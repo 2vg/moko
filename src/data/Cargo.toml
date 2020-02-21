@@ -1,0 +1,11 @@
+[package]
+name = "moko-data"
+version = "0.1.0"
+authors = ["mofu"]
+edition = "2018"
+
+[dependencies]
+serde = "1.0.104"
+chrono = { version = "0.4.10", features = ["serde"] }
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

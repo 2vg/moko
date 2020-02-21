@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "src/app",
+    "src/data",
+    "src/domain",
+    "src/migration"
+]
