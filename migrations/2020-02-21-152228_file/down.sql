@@ -1,1 +1,1 @@
-DROP TABLE "moko_files"
+DROP TABLE "files"
