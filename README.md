@@ -3,9 +3,7 @@
 moko is very simple file sharing web app.
 
 It's like a SandBox for building web applications in Rust, using Actix, barrel, diesel... and etc.
-I developing based on DDD design.
-
-At this time, i cannot test what works, because the compilation of `diesel` fails.
+I developing based on DDD design(for practice).
 
 ## design
 

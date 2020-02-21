@@ -5,7 +5,12 @@ authors = ["mofu"]
 edition = "2018"
 
 [dependencies]
-serde = "1.0.104"
+anyhow = "*"
+serde = { version = "1.0.104", features = ["derive"] }
 chrono = { version = "0.4.10", features = ["serde"] }
+diesel = { version = "1.4.3", features = ["sqlite"] }
+dotenv = "0.15.0"
+
+domain = { package = "moko-domain", path = "../domain" }
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

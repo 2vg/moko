@@ -1,12 +1,13 @@
-use serde::{Serialize, Deserialize};
-use chrono::{Utc, DateTime};
-use chrono::serde::ts_seconds;
+use crate::schema::files;
 
-#[derive(Serialize, Deserialize, Debug, Clone, PartialEq)]
+use serde::{Deserialize, Serialize};
+use diesel::{AsChangeset, Insertable, Queryable};
+
+#[derive(Queryable, Serialize, Deserialize, Debug, Clone, PartialEq)]
 pub struct File {
-    file_name: String,
-    is_no_expires: bool,
-    #[serde(with = "ts_seconds")]
-    expires: DateTime<Utc>,
-    key: String
+    pub id: i32,
+    pub file_name: String,
+    pub is_no_expires: bool,
+    pub expires: String,
+    pub key: String
 }

@@ -1,9 +1,7 @@
-use chrono::{Utc, DateTime};
-
 #[derive(Clone, Debug, PartialEq)]
 pub struct FileContent {
-    file_name: String,
-    is_no_expires: bool,
-    expires: DateTime<Utc>,
-    key: String
+    pub file_name: String,
+    pub is_no_expires: bool,
+    pub expires: String,
+    pub key: String
 }
