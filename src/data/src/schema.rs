@@ -1,7 +1,6 @@
-#[macro_use]
 table! {
     files (id) {
-        id -> Integer,
+        id -> Text,
         file_name -> Text,
         is_no_expires -> Bool,
         expires -> Text,

@@ -6,12 +6,15 @@ use std::path::Path;
 
 use crate::mods::helper::{generate_random_string, get_file_ext};
 use crate::mods::error::{HttpResponseBuilderExt};
+use domain::files::models::FileContent;
 
 #[post("/upload")]
 pub async fn save_file(mut payload: Multipart) -> Result<HttpResponse, Error> {
     // iterate over multipart stream
     while let Some(item) = payload.next().await {
         let mut field = item?;
+        let mut expires = String::from("");
+        let mut key = String::from("");
         let content_disposition = field.content_disposition()
                                        .ok_or_else(|| actix_web::error::ParseError::Incomplete)?;
 
