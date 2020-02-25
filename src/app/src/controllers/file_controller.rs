@@ -24,8 +24,8 @@ pub async fn save_file(mut payload: Multipart) -> Result<HttpResponse, Error> {
                     return Ok(HttpResponse::BadRequest().into())
                 },
                 _ => {
-                    return Ok(HttpResponse::BadRequest().create_error_response("not allowed any field.",
-                                                                               "don't add to field any key-values."))
+                    return Ok(HttpResponse::BadRequest().error_response("not allowed any field.",
+                                                                        "don't add to field any key-values."))
                 }
             }
         }
