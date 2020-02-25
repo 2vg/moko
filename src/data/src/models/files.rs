@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 use diesel::{Insertable, Queryable};
 
 #[derive(Queryable, Serialize, Deserialize, Debug, Clone, PartialEq)]
-pub struct File {
+pub struct FileModel {
     pub id: String,
     pub file_name: String,
     pub is_no_expires: bool,
@@ -14,7 +14,7 @@ pub struct File {
 
 #[derive(Insertable, Serialize, Deserialize, Debug, Clone, PartialEq)]
 #[table_name = "files"]
-pub struct NewFile<'a> {
+pub struct NewFileModel<'a> {
     pub id: String,
     pub file_name: &'a str,
     pub is_no_expires: bool,

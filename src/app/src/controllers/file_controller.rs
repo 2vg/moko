@@ -6,7 +6,7 @@ use std::path::Path;
 
 use crate::mods::helper::{generate_random_string, get_file_ext};
 use crate::mods::error::{HttpResponseBuilderExt};
-use domain::files::models::FileContent;
+use domain::models::files::File;
 
 #[post("/upload")]
 pub async fn save_file(mut payload: Multipart) -> Result<HttpResponse, Error> {
